@@ -1,27 +1,25 @@
 import "./App.css";
+import { styled } from "@mui/material/styles";
+import { Slider } from "@mui/material";
+import Box from "@mui/material/Box";
 
-function App() {
+const CustomizedSlider = styled(Slider)`
+  color: #20b2aa;
+
+  :hover {
+    color: #2e8b57;
+  }
+
+  & .MuiSlider-thumb {
+    border-radius: 1px;
+  }
+`;
+
+export default function StyledComponentsDeep() {
   return (
-    <div className="container">
-      <div style={box}>
-        <h2>Form</h2>
-        <input style={input} type="text" placeholder="Name" />
-        <input style={input} type="text" placeholder="Email" />
-        <input style={input} type="text" placeholder="Phone" />
-        <input style={input} type="text" placeholder="Password" />
-      </div>
-    </div>
+    <Box sx={{ width: 300 }}>
+      <Slider defaultValue={30} />
+      <CustomizedSlider defaultValue={30} />
+    </Box>
   );
 }
-
-export default App;
-
-const box: React.CSSProperties = {
-  flexDirection: "column",
-  display: "flex",
-};
-const input: React.CSSProperties = {
-  margin: "5px 0",
-  width: "50%",
-  alignSelf: "center",
-};
