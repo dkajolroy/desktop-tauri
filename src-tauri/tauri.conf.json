@@ -1,14 +1,14 @@
 {
   "build": {
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
     "devPath": "http://localhost:1420",
     "distDir": "../dist",
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "Multi Touch",
-    "version": "0.1.0"
+    "productName": "tauri-app",
+    "version": "0.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -33,7 +33,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.app.dev",
+      "identifier": "com.new.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -62,7 +62,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "tauri-app",
+        "title": "Tauri App",
         "width": 800
       }
     ]

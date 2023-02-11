@@ -1,25 +1,25 @@
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
-import { styled } from "@mui/material/styles";
-import { Slider } from "@mui/material";
-import Box from "@mui/material/Box";
+import Home from "./window/Home";
 
-const CustomizedSlider = styled(Slider)`
-  color: #20b2aa;
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
-  :hover {
-    color: #2e8b57;
-  }
-
-  & .MuiSlider-thumb {
-    border-radius: 1px;
-  }
-`;
-
-export default function StyledComponentsDeep() {
+function App() {
   return (
-    <Box sx={{ width: 300 }}>
-      <Slider defaultValue={30} />
-      <CustomizedSlider defaultValue={30} />
-    </Box>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Home />
+    </ThemeProvider>
   );
 }
+
+export default App;
