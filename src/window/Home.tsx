@@ -133,6 +133,7 @@ export default function Home(props: Props) {
         </Drawer>
       </Box>
       <Box
+        minHeight="100vh"
         component="main"
         sx={{
           flexGrow: 1,
